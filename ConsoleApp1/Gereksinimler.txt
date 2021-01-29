@@ -3,11 +3,3 @@ E devlet sistemini kullanarak dogrulama yapan bir servis,simulasyonda olur.
 oyun satisi yapilacak ortam,satislar oyuncularla iliskilendirilmesi lazim. 
 sisteme kampanya girisi olacak, kampanyanin silinmesi ve guncellenmesini de simule et. 
 satislarda kampanya entegrasyonunu da simule et
-
-
-
-            person.Id = 1;
-            person.Name = "Melik Firat";
-            person.Surname = "Basci";
-            person.BirthYear = 1999;
-            person.NationalIdentity = "12345678910";

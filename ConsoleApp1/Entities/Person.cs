@@ -14,5 +14,6 @@ namespace ConsoleApp1.Entities
         public string Surname { get; set; }
         public string NationalIdentity { get; set; }
         public int BirthYear { get; set; }
+        public double Cash { get ; set ; }
     }
 }

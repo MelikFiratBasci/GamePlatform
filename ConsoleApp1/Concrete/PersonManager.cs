@@ -9,8 +9,11 @@ namespace ConsoleApp1.Concrete
     public abstract class PersonManager
     {
         PersonDatabase personDatabaseManager = new PersonDatabase();
+        GameManager gameManager = new Game();
+       
         bool personCheck = true;
-        
+
+
         public void Add(IPerson person)
         {
             if (personCheck == true)
@@ -21,23 +24,21 @@ namespace ConsoleApp1.Concrete
             {
                 Console.WriteLine("============== lutfen kimlik bilgilerinizi dogru giriniz ==============");
             }
-
         }
-
 
         public void Delete(IPerson person)
         {
             personDatabaseManager.Delete(person);
         }
 
-        public void Update(IPerson person,IPerson person1)
+        public void Update(IPerson person, IPerson person1)
         {
-            personDatabaseManager.Update(person,person1);
-            
+            personDatabaseManager.Update(person, person1);
         }
-        public void List()
+        public void Login(IPerson person)
         {
-            personDatabaseManager.List();
+            personDatabaseManager.Login(person);
         }
+        
     }
 }

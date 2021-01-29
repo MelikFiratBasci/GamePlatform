@@ -9,7 +9,7 @@ namespace ConsoleApp1.Concrete
     public abstract class PersonDatabaseManager
     {
         public List<IPerson> personsinDb = new List<IPerson>();
-
+        GameManager gameManager = new Game();
 
 
         public void Add(IPerson person)
@@ -25,12 +25,12 @@ namespace ConsoleApp1.Concrete
             }
             else
             {
-                Console.WriteLine( "hatali islem   ");
+                Console.WriteLine("hatali islem   ");
             }
         }
 
 
-        public void Update(IPerson person,IPerson person1)
+        public void Update(IPerson person, IPerson person1)
         {
 
             if (personsinDb.Contains(person))
@@ -43,19 +43,19 @@ namespace ConsoleApp1.Concrete
                 Console.WriteLine("hatali islem");
             }
         }
-        public void List()
+        public void Login(IPerson person)
         {
-
-            Console.WriteLine(personsinDb.Count);
-
-
-            foreach (var item in personsinDb)
+            
+            if (personsinDb.Contains(person))
             {
-                Console.WriteLine("===========" + item.Id + "===========");
-
+                Console.WriteLine("============================" + "     " + person.Id + "   " + person.Name + "   " + person.UserName + "   " + "========================================");
+                
             }
-
+            else
+            {
+                Console.WriteLine("hatali giris ");
+            }
         }
-        
+
     }
 }

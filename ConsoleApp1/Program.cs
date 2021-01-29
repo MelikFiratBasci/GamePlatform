@@ -9,48 +9,50 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-           
-
+      
             IPerson person = new Person();
             person.Id = 1;
-            person.Name = "Melik Firat";
+            person.Name = "Firat";
             person.Surname = "Basci";
             person.BirthYear = 1999;
             person.NationalIdentity = "12345678910";
+            person.UserName = "mbasci";
             IPerson person2 = new Person();
             person2.Id = 2;
-            person2.Name = "Melik Firat";
-            person2.Surname = "Basci";
+            person2.Name = "kullanici";
+            person2.Surname = "soyad";
             person2.BirthYear = 1999;
-            person2.NationalIdentity = "12345678910";
-            IPerson person3 = new Person();
-            person3.Id = 3;
-            person3.Name = "Melik Firat";
-            person3.Surname = "Basci";
-            person3.BirthYear = 1999;
-            person3.NationalIdentity = "12345678910";
-            IPerson person5 = new Person();
-            person5.Id = 5;
-            person5.Name = "Melik Firat";
-            person5.Surname = "Basci";
-            person5.BirthYear = 1999;
-            person5.NationalIdentity = "12345678910";
-            
+            person2.NationalIdentity = "12345678911";
+            person2.UserName = "xxxxx";
+           
+
             PersonManager personManager = new Person();
             personManager.Add(person);
             personManager.Add(person2);
-            personManager.Add(person3);
-            personManager.Update(person3,person5);
-            
-          
+            //personManager.Add(person3);
+            //personManager.Update(person3,person5);
+         
 
+            IGame game1 = new Game() { GameName = "oyun1", GamePrice = 200, DiscountPercent = 20 ,GameId=1  };
+            IGame game2 = new Game() { GameName = "oyun2", GamePrice = 200, DiscountPercent = 20,GameId=2 };
+            IGame game3 = new Game() { GameName = "oyun3", GamePrice = 160, DiscountPercent = 20, GameId = 3 };
+            IGame game4 = new Game() { GameName = "oyun4", GamePrice = 160, DiscountPercent = 0, GameId = 4 };
             
-            personManager.List();
+            GameManager game = new Game();
+            game.Add(game1);
+            game.Add(game2);
+            game.Add(game3);
+            game.Add(game4);
+            
+            
+            personManager.Login(person);
+            game.List();
 
 
-            
-            
-            
+
+
+
+
 
         }
     }
