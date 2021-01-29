@@ -1,0 +1,5 @@
+Her oyuncu icin Kayit yapilacak,bilgiler guncelllenecek,bilgiler silinecek. 
+E devlet sistemini kullanarak dogrulama yapan bir servis,simulasyonda olur.
+oyun satisi yapilacak ortam,satislar oyuncularla iliskilendirilmesi lazim. 
+sisteme kampanya girisi olacak, kampanyanin silinmesi ve guncellenmesini de simule et. 
+satislarda kampanya entegrasyonunu da simule et
